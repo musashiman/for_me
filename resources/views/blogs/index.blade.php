@@ -13,6 +13,7 @@
        
     <body class="antialiased">
         <h1>Posts</h1>
+        <a href="/blogs/create">create</a>
         <div class="blogs">
             @foreach($blogs as $blog)
            <h2><a class="title" href="/blogs/{{$blog->id}}">{{$blog->title}}</a></h2> 

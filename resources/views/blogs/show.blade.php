@@ -19,6 +19,7 @@
             <p class="body">{{$blog->body}}</p>
         
         </div>
+    <div class="edit"><a href="/blogs/{{ $blog->id }}/edit">edit</a></div>
         <div class="footer">
            <a href="/">戻る</a>
         </div>

@@ -18,4 +18,9 @@ class Blog extends Model
     {
         return $this->orderBy("updated_at","desc")->paginate($count_limit);
     }
+    
+    protected $fillable = [
+    'title',
+    'body',
+];
 }
