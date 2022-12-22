@@ -13,14 +13,14 @@
        
     <body class="antialiased">
         <h1>Posts</h1>
-        <div class="blogs">
-            @foreach($blogs as $blog)
-           <h2><a class="title" href="/blogs/{{$blog->id}}">{{$blog->title}}</a></h2> 
+        <div class="blog">
+            
+            <h2 class="title">{{$blog->title}}</h2>
             <p class="body">{{$blog->body}}</p>
-            @endforeach
+        
         </div>
-        <div class="paginate">
-            {{$blogs->links()}}
+        <div class="footer">
+           <a href="/">戻る</a>
         </div>
     </body>
 </html>
