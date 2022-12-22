@@ -19,6 +19,8 @@
             <p class="body">{{$blog->body}}</p>
             @endforeach
         </div>
-        
+        <div class="paginate">
+            {{$blogs->links()}}
+        </div>
     </body>
 </html>
