@@ -8,8 +8,8 @@ use App\Models\Blog;
 class BlogController extends Controller
 {
     //
-public function index(Blog $blog)
+public function index(Blog $blogs)
 {
-    return $blog->get();
+    return view("blogs/index")->with(["blogs"=>$blogs->get()]);
 }
 }
