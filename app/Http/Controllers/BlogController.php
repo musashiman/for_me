@@ -11,6 +11,7 @@ class BlogController extends Controller
     //
 public function index(Blog $blogs)
 {
+    
     return view("blogs/index")->with(["blogs"=>$blogs->getPaginatorOrder()]);
 }
 
@@ -21,8 +22,11 @@ public function create()
 
 public function show(Blog $blog)
 {
+    dd($blog);
     return view("blogs/show")->with(["blog"=>$blog]);
 }
+
+
 
 public function store(Blog $blog ,BlogRequest $request)
 {
