@@ -13,3 +13,4 @@ public function index(Blog $blog)
     return $blog->get();
 }
 }
+ //復習
