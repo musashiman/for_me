@@ -56,3 +56,4 @@ public function delete(Blog $blog)
 }
 
 }
+ //復習
