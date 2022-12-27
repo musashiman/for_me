@@ -13,6 +13,7 @@
        
     <body class="antialiased">
         <h1>Posts</h1>
+        
         <div class="posts">
             @foreach($blogs as $blog)
             <div class="post">
@@ -20,6 +21,7 @@
                 <p class="body">{{$blog->body}}</p>
             </div>
             @endforeach
+    
         </div>
     </body>
 </html>
