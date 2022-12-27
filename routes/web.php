@@ -16,3 +16,4 @@ use App\Http\Controllers\BlogController;
 
 
 Route::get("/",[BlogController::class,"index"]);
+//復習

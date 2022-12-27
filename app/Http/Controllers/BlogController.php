@@ -10,6 +10,7 @@ class BlogController extends Controller
     //
 public function index(Blog $blogs)
 {
-    return view("blogs/index")->with(["blogs"=>$blogs->getPaginatorOrder()]);
+    return view("blogs/index")->with("blogs",$blogs->get());
 }
+
 }

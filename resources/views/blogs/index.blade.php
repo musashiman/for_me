@@ -13,14 +13,13 @@
        
     <body class="antialiased">
         <h1>Posts</h1>
-        <div class="blogs">
+        <div class="posts">
             @foreach($blogs as $blog)
-            <h2 class="title">{{$blog->title}}</h2>
-            <p class="body">{{$blog->body}}</p>
+            <div class="post">
+                <h2 class="title">{{$blog->title}}</h2>
+                <p class="body">{{$blog->body}}</p>
+            </div>
             @endforeach
-        </div>
-        <div class="paginate">
-            {{$blogs->links()}}
         </div>
     </body>
 </html>
