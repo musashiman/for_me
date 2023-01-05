@@ -19,10 +19,10 @@
            <h2><a class="title" href="/blogs/{{$blog->id}}">{{$blog->title}}</a></h2> 
             <p class="body">{{$blog->body}}</p>
             
-            <form action="/blogs/{{ $blog->id }}" id="form_{{ $blog->id }}" method="post">
-             @csrf
-             @method('DELETE')
-                <button type="button" onclick="deletePost({{ $blog->id }})">delete</button> 
+            <form id="form_{{$blog->id}}" method="post" action="/blogs/{{$blog->id}}">
+                @csrf
+                @method("DELETE")
+                <button type="button" onclick="deleteAction({{$blog->id}})">DELETE</button>
             </form>
             @endforeach
         </div>
@@ -31,13 +31,14 @@
         </div>
         
         <script>
-         function deletePost(id) {
+            function deleteAction(id)
+            {
                 'use strict'
-
-            if (confirm('削除すると復元できません。\n本当に削除しますか？')) {
-             document.getElementById(`form_${id}`).submit();
-         }
-    }
+                if(confirm("本当に消してもいいですか？\nデータは消えます")){
+                    document.getElementById(`form_${id}`).submit();
+                }
+            }
         </script>
+ 
     </body>
 </html>

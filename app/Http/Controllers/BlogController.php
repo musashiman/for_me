@@ -44,4 +44,10 @@ public function update(BlogRequest $request,Blog $blog)
     return redirect("/blogs/" .$blog->id);
 }
 
+public function delete(Blog $blog)
+{
+    $blog->delete();
+    return redirect("/");
+}
+
 }
