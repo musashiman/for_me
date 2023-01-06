@@ -1,25 +1,35 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Blog</title>
-    </head>
-    <body>
-        <h1>Blog Name</h1>
-        <form action="/blogs" method="POST">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- Styles -->
+       
+    <body class="antialiased">
+        <h1>Create</h1>
+        
+        <form class="form" action="/blogs" method="post">
             @csrf
-            <div class="title">
-                <h2>Title</h2>
-                <input type="text" name="blog[title]" placeholder="タイトル" value="{{ old('blog.title') }}"/>
-                <p class="title__error" style="color:red">{{ $errors->first('blog.title') }}</p>
-            </div>
-            <div class="body">
-                <h2>Body</h2>
-                <textarea name="blog[body]" placeholder="今日も1日お疲れさまでした。">{{ old('blog.body') }}</textarea>
-                <p class="body__error" style="color:red">{{ $errors->first('blog.body') }}</p>
-            </div>
-            <input type="submit" value="保存"/>
+            <h2 class="title">title</h2>
+            <input name="blog[title]" type="text" placehodler="タイcトル"/><br>
+            <p class="title_error" style="color:red">{{$errors->first("blog.title")}}</p>
+            <h2 class="body">body</h2>
+            <textarea name="blog[body]" placehodler="復習用に作ったブログApp"></textarea><br>
+            <p class="body_error" style="color:red">{{$errors->first("blog.body")}}</p>
+            
+            <input type="submit" value="作成"/>
         </form>
-        <div class="back">[<a href="/">back</a>]</div>
+        
+        <div class="footer">
+            <a href="/">戻る</a>
+        </div>
+        
+        
     </body>
 </html>
