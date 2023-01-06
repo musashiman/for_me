@@ -25,7 +25,9 @@ public function create()
     return view("blogs/create");
 }
 
-public function store(BlogRequest $request,Blog $blog)
+
+
+public function store(Blog $blog ,BlogRequest $request)
 {
     $input = $request['blog'];
     $blog->fill($input)->save();
@@ -50,4 +52,8 @@ public function delete(Blog $blog)
     return redirect("/");
 }
 
+
 }
+
+}
+ //復習 
